@@ -1,0 +1,146 @@
+/* Site-specific additions on top of Strata's main.css */
+
+	#header h1 {
+		line-height: 1.6em;
+	}
+
+	/* News */
+
+		ul.news {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.news li {
+				padding: 0.35em 0 0.35em 6.5em;
+				position: relative;
+			}
+
+			ul.news .date {
+				color: #49bf9d;
+				font-weight: 600;
+				left: 0;
+				position: absolute;
+				white-space: nowrap;
+			}
+
+			@media screen and (max-width: 480px) {
+
+				ul.news li {
+					padding-left: 0;
+				}
+
+				ul.news .date {
+					display: block;
+					position: static;
+				}
+
+			}
+
+	/* Publications */
+
+		.pub {
+			margin-bottom: 2.5em;
+		}
+
+			.pub .image.fit {
+				margin-bottom: 1em;
+			}
+
+			.pub .image.fit:before {
+				display: none;
+			}
+
+			.pub .image.fit img {
+				border-radius: 4px;
+				box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+			}
+
+			.pub h3 {
+				margin-bottom: 0.35em;
+			}
+
+			.pub p {
+				margin-bottom: 0.35em;
+			}
+
+			.pub .authors strong {
+				color: #787878;
+			}
+
+			.pub .venue {
+				font-style: italic;
+			}
+
+			.pub .summary {
+				font-size: 0.9em;
+			}
+
+		.tag {
+			background: #49bf9d;
+			border-radius: 3px;
+			color: #fff;
+			font-size: 0.75em;
+			font-style: normal;
+			font-weight: 600;
+			padding: 0.15em 0.6em;
+			white-space: nowrap;
+		}
+
+		ul.actions.small {
+			margin: 0.75em 0 0 0;
+		}
+
+			ul.actions.small li {
+				padding: 0 0.5em 0 0;
+			}
+
+	/* Theses */
+
+		ul.theses {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.theses > li {
+				margin-bottom: 2em;
+			}
+
+			ul.theses h3 {
+				margin-bottom: 0.35em;
+			}
+
+			ul.theses p {
+				margin-bottom: 0.35em;
+			}
+
+			ul.theses .translation {
+				font-style: italic;
+			}
+
+	/* Racing */
+
+		ul.results {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.results .icon {
+				color: #e0b400;
+				margin-right: 0.35em;
+			}
+
+		.gallery .work-item h3 {
+			font-size: 0.8em;
+			margin: -1em 0 1.5em 0;
+		}
+
+	/* Projects */
+
+		.projects h3 {
+			margin-bottom: 0.25em;
+		}
+
+		.projects p {
+			margin-bottom: 1.5em;
+		}
