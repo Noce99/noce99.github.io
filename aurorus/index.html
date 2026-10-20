@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>AuRoRus – Autonomous racing stack in Rust for RoboRacer / F1TENTH</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="AuRoRus (Autonomous RoboRacer Rust) is an open-source autonomous driving stack for RoboRacer (F1TENTH) cars written in Rust: simulator, SLAM, race-line planning, opponent detection, Frenet overtaking, MPC and a web GUI." />
+		<meta name="author" content="Enrico Mannocci" />
+		<link rel="canonical" href="https://noce99.github.io/aurorus/" />
+		<meta property="og:title" content="AuRoRus – Autonomous racing stack in Rust for RoboRacer / F1TENTH" />
+		<meta property="og:description" content="Open-source autonomous driving stack for RoboRacer (F1TENTH) cars, written in Rust. Second place at the RoboRacer competition, ICRA 2026." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://noce99.github.io/aurorus/" />
+		<meta property="og:image" content="https://noce99.github.io/images/racing/fulls/Car_4.jpg" />
+		<link rel="icon" href="../images/avatar.jpg" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/custom.css" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareSourceCode",
+			"name": "AuRoRus",
+			"alternateName": "Autonomous RoboRacer Rust",
+			"description": "Autonomous driving stack for RoboRacer (F1TENTH) cars written in Rust: simulator, SLAM, race-line planning, opponent detection, driving algorithms, car drivers and a web GUI.",
+			"url": "https://noce99.github.io/aurorus/",
+			"codeRepository": "https://github.com/Noce99/AuRoRus",
+			"programmingLanguage": "Rust",
+			"license": "https://www.apache.org/licenses/LICENSE-2.0",
+			"keywords": "Rust, RoboRacer, F1TENTH, autonomous racing, autonomous driving, SLAM, MPC, simulator, robotics",
+			"author": {
+				"@type": "Person",
+				"name": "Enrico Mannocci",
+				"url": "https://noce99.github.io/"
+			}
+		}
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="../" class="image avatar"><img src="../images/avatar.jpg" alt="Enrico Mannocci" /></a>
+					<h1><strong>AuRoRus</strong><br />
+					Autonomous RoboRacer Rust<br />
+					by <a href="../">Enrico Mannocci</a></h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- About -->
+					<section id="about">
+						<header class="major">
+							<h2>AuRoRus: an autonomous racing stack<br />
+							in Rust for RoboRacer / F1TENTH cars.</h2>
+						</header>
+						<p><strong>AuRoRus</strong> (<strong>Au</strong>tonomous <strong>Ro</strong>boracer <strong>Rus</strong>t) is an
+						open-source autonomous driving stack for <a href="https://roboracer.ai">RoboRacer</a> (formerly F1TENTH)
+						1:10 scale cars, written entirely in Rust. It covers the whole pipeline in one crate: a vehicle and LIDAR
+						simulator with a random track generator, SLAM mapping and localization, race-line planning, opponent
+						detection, a set of autonomous driving algorithms, and the drivers for the real car (VESC, Hokuyo LIDAR,
+						joystick). Everything is driven from a browser GUI, and the same code runs in simulation on a laptop and on
+						the car.</p>
+						<ul class="actions">
+							<li><a href="https://github.com/Noce99/AuRoRus" class="button">Code on GitHub</a></li>
+							<li><a href="https://crates.io/crates/aurorus" class="button">crates.io</a></li>
+							<li><a href="https://docs.rs/aurorus" class="button">docs.rs</a></li>
+						</ul>
+					</section>
+
+				<!-- Demo -->
+					<section id="demo">
+						<h2>In action</h2>
+						<div class="row aurorus-media">
+							<div class="col-4 col-12-small">
+								<span class="image fit portrait"><img src="../images/aurorus/aurorus_in_the_real_world.gif" alt="The real RoboRacer car driving autonomously with AuRoRus on an outdoor track bounded by black tubes" loading="lazy" /></span>
+								<p class="caption">AuRoRus driving the real car</p>
+							</div>
+							<div class="col-8 col-12-small">
+								<span class="image fit"><img src="../images/aurorus/frenet_overtaking_vs_mpc_simulating_to_race_at_vienna_quali.gif" alt="The AuRoRus web GUI simulating the Frenet overtaking and the MPC racing on the Vienna 2026 qualifying map" loading="lazy" /></span>
+								<p class="caption">Frenet overtaking against the MPC in simulation, on the ICRA 2026 Vienna qualifying track</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Features -->
+					<section id="features">
+						<h2>What is inside</h2>
+						<ul class="features">
+							<li><strong>Simulator</strong>: vehicle dynamics models, LIDAR simulation, a random track generator and simulated opponents to race against.</li>
+							<li><strong>SLAM</strong>: mapping a track and localizing on a known map, plus a mapping lab to rebuild maps offline with other parameters and compare them.</li>
+							<li><strong>Race-line planning</strong> for any map, including the ICRA 2025 Atlanta and ICRA 2026 Vienna tracks shipped with the repository.</li>
+							<li><strong>Opponent detection</strong>: finding and tracking the other car by comparing the LIDAR scan with the map.</li>
+							<li><strong>Driving algorithms</strong>, selectable and tunable live: gap follower, pure pursuit, disparity extender, potential field, path follower, Frenet overtaking and MPC.</li>
+							<li><strong>Real car drivers</strong> for the VESC, the Hokuyo LIDAR and a joystick, with a guided car calibration and hardware probes.</li>
+							<li><strong>Web GUI</strong> to control everything from a browser, plus debug-session replay and a benchmark viewer to compare lap times and telemetry.</li>
+						</ul>
+					</section>
+
+				<!-- Racing -->
+					<section id="results">
+						<h2>Racing with AuRoRus</h2>
+						<p>The algorithms in AuRoRus come from the <strong>UniBo Motorsport Driverless 1:10</strong> team of the University
+						of Bologna, which I have led since 2024, ported from our ROS2 stack to Rust.</p>
+						<ul class="results">
+							<li><span class="icon solid fa-trophy"></span> <strong>1st place</strong>, RoboRacer World Championship, ICRA 2025, Atlanta, with the Frenet overtaking</li>
+							<li><span class="icon solid fa-trophy"></span> <strong>2nd and 3rd place</strong>, Master Cup, RoboRacer World Championship, ICRA 2026, Vienna, with the Frenet overtaking and the MPC</li>
+						</ul>
+						<span class="image fit aurorus-photo"><img src="../images/racing/fulls/Car_4.jpg" alt="The RoboRacer car next to its trophy from ICRA 2026 in Vienna" loading="lazy" /></span>
+					</section>
+
+				<!-- Get started -->
+					<section id="get-started">
+						<h2>Get started</h2>
+						<p>Install Rust with <a href="https://rustup.rs/">rustup</a>, then build and run the web GUI from the repository root
+						and open <code>http://localhost:1999</code>. On a machine that isn't set up as a car it runs the simulation.</p>
+<pre><code>git clone https://github.com/Noce99/AuRoRus
+cd AuRoRus
+cargo build --release
+./target/release/web_gui</code></pre>
+						<p>The <a href="https://github.com/Noce99/AuRoRus#readme">README</a> documents every executable, and the
+						<a href="https://github.com/Noce99/AuRoRus/tree/master/tutorials">tutorials</a> walk through writing an
+						autonomous algorithm from an empty file. AuRoRus is dual licensed under Apache 2.0 and MIT.</p>
+						<ul class="actions">
+							<li><a href="https://github.com/Noce99/AuRoRus" class="button">Code on GitHub</a></li>
+						</ul>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="mailto:enrico.mannocci3@unibo.it" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/Noce99/AuRoRus" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="../" class="icon solid fa-home"><span class="label">Home</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Enrico Mannocci</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.poptrox.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
